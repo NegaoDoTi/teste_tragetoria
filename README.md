@@ -1,4 +1,4 @@
-## Teste Tecnico Desenvolvedor Python RPA Pleno Trajetorio
+## Teste Tecnico Desenvolvedor Python RPA Pleno Trajetoria
 
 ## Descrição
 O teste consiste em fazer a leitura de um arquivo CSV com uma coluna contendo CEPS,
