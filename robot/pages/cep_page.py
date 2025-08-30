@@ -17,8 +17,6 @@ class CepPage():
 
             self.__driver.get(f"https://buscacep.com.br/cep/{cep}")
 
-            sleep(2)
-
             cep_data = {
                 "cep" : cep,
                 "lougadouro" : "",
@@ -35,7 +33,7 @@ class CepPage():
                     {
                         "css_selector" : 'div[class="card-header bg-danger text-white"] h4'
                     },
-                    time=5
+                    time=3
                 )
 
                 if undefined.text.strip() == "CEP não encontrado":
@@ -52,13 +50,14 @@ class CepPage():
                 {
                     "css_selector" : 'div[class="col-md-6 mb-3"] div[class="info-item"] label'
                 },
-                time=10
+                time=5
             )
 
             datas = self.__waits.wait_visibility_all(
                 {
                     "css_selector" : 'p[class="form-control-plaintext fs-5"]'
-                }
+                },
+                time=5
             )
 
             for i, info in enumerate(infos):
