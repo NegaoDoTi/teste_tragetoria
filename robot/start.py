@@ -3,6 +3,7 @@ from utils.driver import ChromeWebdriver
 from utils.csv_manager import CSVManager
 from robot.pages.index_page import IndexPage
 from robot.pages.cep_page import CepPage
+from utils.email_sender import EmailSender
 from traceback import format_exc
 import logging
 
@@ -11,6 +12,7 @@ class StartRobot():
         self.driver:ChromeWebdriver
         self.__index_page:IndexPage
         self.__cep_page:CepPage
+        self.__email_sender = EmailSender()
 
     def run(self, ceps:list) -> None:
         try:
@@ -41,10 +43,30 @@ class StartRobot():
 
                     logging.error(f"{search_cep["type"]}, {search_cep["exception"]}")
 
-            
-            report = CSVManager().make_report(cep_datas)
+            # report = CSVManager().make_report(cep_datas)
 
-            print(f"Relatorio gerado com sucesso: {report}")
+            # print(f"Relatorio gerado com sucesso: {report}")
+
+            email_recipient = "viniciusluciano2012@hotmail.com"
+
+            self.__email_sender.start_connection()
+
+            for i, cep_data in enumerate(cep_datas):
+                if i == 4:
+                    break
+                
+                email = self.__email_sender.send_email(cep_data, email_recipient)
+
+                if email == False:
+                    print(f"Não foi possivel enviar email para {email_recipient}")
+
+            self.__email_sender.close_connection()
+
+            print("Todos os email enviado com sucesso!")
+
+            
 
         except Exception:
             print(format_exc())
+
+            return
