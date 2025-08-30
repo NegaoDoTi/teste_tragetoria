@@ -11,13 +11,22 @@ from pandas import DataFrame
 import logging
 
 class StartRobot():
+    """Classe responsavel por orquestrar todas as partes da Automação/Robô
+    """
+
     def __init__(self):
         self.driver:ChromeWebdriver
         self.__index_page:IndexPage
         self.__cep_page:CepPage
         self.__email_sender = EmailSender()
 
-    def run(self, ceps:list) -> None:
+    def run(self, ceps:list[dict]) -> None:
+        """Função que a ordem logica de quais parte do robô deve rodar primeiro
+
+        Args:
+            ceps (list): list de dicionarios contendo todos os cep a serem buscados
+        """
+
         try:
             self.driver = Driver().get_chrome_driver()
             

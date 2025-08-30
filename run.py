@@ -5,6 +5,9 @@ import logging
 logging.basicConfig(filename="robot.log", level=logging.INFO, format="%(asctime)s [%(name)s] [%(levelname)s] - %(message)s",)
 
 def run() -> None:
+    """Função responsavel por Iniciar a Automação/Robô
+    """
+
     try:
         ceps = CSVManager().read_csv("./ceps_lista_30.csv")
     except Exception:

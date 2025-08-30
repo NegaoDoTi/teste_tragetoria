@@ -4,6 +4,9 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 
 
 class Waits:
+    """Biblioteca Waits criada por mim para facilitar a utilização do Waits do Selenium
+    """
+
 
     def __init__(self, driver:WebDriver) -> None:
         self.locators = {

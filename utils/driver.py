@@ -27,9 +27,7 @@ class Driver():
             
             self.__options.add_argument("--no-sandbox")
             self.__options.add_argument("--disable-dev-shm-usage")
-            
-            # self.__driver = webdriver.Remote("http://selenium:4444/wd/hub", DesiredCapabilities.CHROME, options=self.__options)
-            
+                        
             self.__service = ChromeService(executable_path=ChromeDriverManager().install())
             
             self.__driver = ChromeWebdriver(options=self.__options, service=self.__service)

@@ -2,6 +2,12 @@ from fpdf import FPDF
 from pandas import DataFrame
 from pathlib import Path
 class PDFManager(FPDF):
+    """Classe responsavel por gerar o relatorio PDF
+
+    Args:
+        FPDF (_type_): lib fpdf
+    """
+
     def __init__(self, orientation = "portrait", unit = "mm", format = "A4", font_cache_dir = "DEPRECATED"):
         super().__init__(orientation, unit, format, font_cache_dir)
 
@@ -11,6 +17,8 @@ class PDFManager(FPDF):
             self.reports_folder.mkdir()
 
     def header(self):
+        """Cria o headers das paginas do pdf
+        """
 
         self.set_font('Arial', 'B', 12)
         self.cell(0, 10, 'Relatório de Endereços por CEP', 0, 1, 'C')
@@ -18,12 +26,21 @@ class PDFManager(FPDF):
         self.ln(5)
 
     def footer(self):
+        """Cria o footers das paginas do pdf
+        """
 
         self.set_y(-15)
         self.set_font('Arial', 'I', 8)
         self.cell(0, 10, f'Página {self.page_no()}', 0, 0, 'C')
 
     def create_table(self, dataframe:DataFrame, col_widths:list = [20, 45, 30, 35, 42, 25, 85]):
+        """Cria a tabela de relatorio com dados utilizando um data frame
+
+        Args:
+            dataframe (DataFrame): pandas dataframe
+            col_widths (list, optional): define a largura das colunas da tabela. Defaults to [20, 45, 30, 35, 42, 25, 85].
+        """
+
 
         self.set_font('Arial', 'B', 10)
         self.set_fill_color(200, 220, 255) 
@@ -43,6 +60,15 @@ class PDFManager(FPDF):
             self.ln()
 
     def make_report(self, dataframe:DataFrame) -> str:
+        """Cria o relatorio em PDF
+
+        Args:
+            dataframe (DataFrame): pandas Dataframe
+
+        Returns:
+            str: caminho absoluto para o relatorio em PDF
+        """
+
         report_path = f"{self.reports_folder}/relatorio.pdf"
 
         self.add_page()

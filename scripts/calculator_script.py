@@ -5,6 +5,12 @@ import pyautogui
 import logging
 
 def calculator(ceps:list[dict]) -> None:
+    """Script que digita todos os cep na calculadora do Windows 10
+
+    Args:
+        ceps (list[dict]): lista de dicionarios contendo os ceps a serem digitados
+    """
+
     try:
         system("calc.exe")
     except Exception:

@@ -5,11 +5,17 @@ from traceback import format_exc
 import logging
 
 class EmailSender():
+    """Classe responsavel por montar o email e envia-lo
+    """
+
     def __init__(self):
         self.__email = EMAIL
         self.__email_password = EMAIL_PASSWORD
     
     def start_connection(self) -> None:
+        """Conecta e faz login no servidor SMTP do Gmail
+        """
+
         self.__server = SMTP("smtp.gmail.com", 587)
 
         self.__server.starttls()
@@ -19,11 +25,16 @@ class EmailSender():
         return
 
     def close_connection(self) -> None:
+        """Desconecata do servidor SMTP
+        """
         self.__server.close()
 
         return
 
     def send_email(self, cep_data:dict, email_recipient:str) -> bool:
+        """Monta corpo do email e o envia para o destinatario
+        """
+        
         try:
             subject = f"Dados cep: {cep_data['cep']}"
 

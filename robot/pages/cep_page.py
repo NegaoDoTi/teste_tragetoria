@@ -5,12 +5,26 @@ from gateways.via_cep import ViaCepGateway
 from time import sleep
 
 class CepPage():
+    """Classe responsavel pela pagina de CEP do site Busca CEP
+    """
+
     def __init__(self, driver:ChromeWebdriver):
         self.__driver:ChromeWebdriver = driver
         self.__waits:Waits = Waits(self.__driver)
         self.via_cep_gateway = ViaCepGateway()
 
     def search_cep(self, cep:str) -> dict[bool, str, str, dict]:
+        """Função que busca dados de um cep no Busca CEP, caso nao encontre tenta na API Via cep
+
+        Args:
+            cep (str): CEP em string
+
+        Returns:
+
+        
+            dict[bool, str, str, dict]: informa se houve erro na execução e retorna dados do cep
+        """
+
         try:
 
             cep = cep.replace("-", "")

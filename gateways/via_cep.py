@@ -2,8 +2,21 @@ from requests import get
 from traceback import format_exc
 
 class ViaCepGateway():
+    """Gateway da API Via Cep
+    """
 
     def search_cep(self, cep_data:dict) -> dict[bool, str, str, dict]:
+        """Função que busca um cep na API
+
+        Args:
+            cep_data (dict): dicionario de dados referente a um cep
+
+        Returns:
+
+        
+            dict[bool, str, str, dict]: informa de houve erro na execução e retona os dados do cep
+        """
+
         try:
             error_message = f"O Cep: {cep_data['cep']} não foi entrado em nenhuma das bases de dados Busca CEP/Via CEP"
 
