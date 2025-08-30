@@ -1,0 +1,6 @@
+pandas==2.3.2
+fpdf2 ==2.8.4
+selenium==4.35.0
+pyautogui==0.9.54
+webdriver-manager==4.0.2
+python-dotenv==1.1.1
