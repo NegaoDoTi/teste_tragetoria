@@ -1,0 +1,31 @@
+cep;lougadouro;bairro;cidade;estado;regiao;status
+01001000;Praça da Sé;Sé;São Paulo;São Paulo (SP);Sudeste;SUCESSO, extraído de Busca CEP
+20031050;Praça Floriano;Centro;Rio de Janeiro;Rio de Janeiro (RJ);Sudeste;SUCESSO, extraído de Busca CEP
+30190110;Rua Araguari;Barro Preto;Belo Horizonte;Minas Gerais (MG);Sudeste;SUCESSO, extraído de Busca CEP
+40010000;Avenida da França;Comércio;Salvador;Bahia (BA);Nordeste;SUCESSO, extraído de Busca CEP
+50010000;Avenida Guararapes;Santo Antônio;Recife;Pernambuco (PE);Nordeste;SUCESSO, extraído de Busca CEP
+60010000;Avenida Presidente Castelo Branco;Moura Brasil;Fortaleza;Ceará (CE);Nordeste;SUCESSO, extraído de Busca CEP
+70040010;Quadra SBN Quadra 1;Asa Norte;Brasília;Distrito Federal (DF);Centro-Oeste;SUCESSO, extraído de Busca CEP
+80010110;Rua Desembargador Westphalen;Centro;Curitiba;Paraná (PR);Sul;SUCESSO, extraído de Busca CEP
+90010000;Rua Siqueira Campos;Centro Histórico;Porto Alegre;Rio Grande do Sul (RS);Sul;SUCESSO, extraído de Busca CEP
+95010200;Beco Jorge Berwanger;Medianeira;Caxias do Sul;Rio Grande do Sul (RS);Sul;SUCESSO, extraído de Busca CEP
+01110050;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+22041001;Avenida Atlântica;Copacabana;Rio de Janeiro;Rio de Janeiro (RJ);Sudeste;SUCESSO, extraído de Busca CEP
+30320130;Rua Santa Fé;Sion;Belo Horizonte;Minas Gerais (MG);Sudeste;SUCESSO, extraído de Busca CEP
+40220400;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+50130100;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+60330200;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+70150110;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+80240220;Rua Bruno Filgueira;Água Verde;Curitiba;Paraná (PR);Sul;SUCESSO, extraído de Busca CEP
+90260300;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+95170400;Rua Três de Outubro;Centro;Farroupilha;Rio Grande do Sul (RS);Sul;SUCESSO, extraído de Busca CEP
+01220300;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+23050001;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+30430540;Praça Santa Terezinha;Barroca;Belo Horizonte;Minas Gerais (MG);Sudeste;SUCESSO, extraído de Busca CEP
+40340600;Rua Rocinha do Iapi;IAPI;Salvador;Bahia (BA);Nordeste;SUCESSO, extraído de Busca CEP
+50250700;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+60460800;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+70270900;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+80380010;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+90390020;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
+95200030;;;;;;CEP não encontrado nas duas bases de dados Busca CEP e Via CEP
