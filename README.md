@@ -30,3 +30,10 @@ Concluída todas essas operações deve se abrir a calculadora do Windows e digi
 ## Relatorios
 
 Os relatorios se encontram na pasta **reports**
+
+## Possiveis melhorias
+
+    1. Integração com RabbitMQ para fazer a extração dos CEPs de forma assincrona
+    2. Integração com banco de dados para salvar os dados de cada CEP
+    3. Troca do Selenium por bibliotecas BeautifulSoup + httpx e tornar codigo todo async para aumentar performance, tornar concorrente e utilizar menos recursos da máquina.
+    4. Utilização de Pydantic para fazer validação dos dados dos CEPs em tempo real com schemas.
